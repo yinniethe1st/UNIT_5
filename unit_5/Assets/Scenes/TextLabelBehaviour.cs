@@ -19,5 +19,11 @@ public class TextLabelBehaviour : MonoBehaviour
         label.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
     }
 
+    public void UpdateLabel()
+
+    {
+         label.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
+    }
+
 
 }
