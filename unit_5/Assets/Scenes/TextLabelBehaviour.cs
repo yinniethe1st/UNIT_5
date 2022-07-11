@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using System.Globalization;
 
 [RequireComponent(typeof(Text))]
 
@@ -15,7 +16,7 @@ public class TextLabelBehaviour : MonoBehaviour
 
     {
         label = GetComponent<Text>();
-        label.text = dataObj.value.ToString(CultureInfo.InvarianCulture);
+        label.text = dataObj.value.ToString(CultureInfo.InvariantCulture);
     }
 
 
