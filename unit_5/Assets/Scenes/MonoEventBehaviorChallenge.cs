@@ -18,7 +18,7 @@ public class MonoEventBehavior : MonoBehaviour
     starEvent.Invoke();
    }
 
-   private void OnDisable()
+   private void OnBecameVisible()
    {
     disableEvent.Invoke();
    }
