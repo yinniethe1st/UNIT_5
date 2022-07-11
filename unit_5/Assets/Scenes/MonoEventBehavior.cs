@@ -5,22 +5,22 @@ using UnityEngine.Events;
 
 public class MonoEventBehavior : MonoBehaviour
 {
-   public UnityEvent OnTriggerStayEvent, DestroyEvent, OnCollisionEvent;
+   public UnityEvent starEvent, awakeEvent, disableEvent;
 
-   private void OnTriggerStay()
+   private void Awake()
 
    {
-    OnTriggerStayEvent.Invoke();
+    awakeEvent.Invoke();
    }
 
-   private void OnDestroy()
+   private void Start()
    {
-    DestroyEvent.Invoke();
+    starEvent.Invoke();
    }
 
-   private void OnCollisionEnter()
+   private void OnBecameVisible()
    {
-    OnCollisionEvent.Invoke();
+    disableEvent.Invoke();
    }
 
 }

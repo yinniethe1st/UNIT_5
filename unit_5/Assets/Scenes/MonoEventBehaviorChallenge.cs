@@ -1,26 +1,28 @@
 
+
+
 using UnityEngine;
 using UnityEngine.Events;
 
 
 public class MonoEventBehavior : MonoBehaviour
 {
-   public UnityEvent starEvent, awakeEvent, disableEvent;
+   public UnityEvent OnTriggerStayEvent, DestroyEvent, OnCollisionEvent;
 
-   private void Awake()
+   private void OnTriggerStay()
 
    {
-    awakeEvent.Invoke();
+    OnTriggerStayEvent.Invoke();
    }
 
-   private void Start()
+   private void OnDestroy()
    {
-    starEvent.Invoke();
+    DestroyEvent.Invoke();
    }
 
-   private void OnBecameVisible()
+   private void OnCollisionEnter()
    {
-    disableEvent.Invoke();
+    OnCollisionEvent.Invoke();
    }
 
 }
